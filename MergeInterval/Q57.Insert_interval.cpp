@@ -1,17 +1,17 @@
 #include <iostream>
-#include <algorithm>
 #include <vector>
-using namespace std;    
+#include <algorithm>
+using namespace std;
 
-// https://leetcode.com/problems/merge-intervals/description/
+// https://leetcode.com/problems/insert-interval/description/
 
 class Solution {
 public:
-    vector<vector<int>> merge(vector<vector<int>>& intervals) {
-       if(intervals.size() <= 1)
-            return intervals;
-        
-        // Step 1: Sort intervals by start time
+    vector<vector<int>> insert(vector<vector<int>>& intervals, vector<int>& newInterval) {
+        // if(intervals.size() <= 1)
+        //     return intervals;
+
+        intervals.push_back(newInterval);
         sort(intervals.begin(), intervals.end());
         
         vector<vector<int>> res;
@@ -34,6 +34,7 @@ public:
                 end1 = end2;
             }
         }
+
         // insted of using above code we can also use below code to merge intervals.
         // for(int i = 1; i < intervals.size(); i++){
         //     if(end >= intervals[i][0]){
@@ -47,7 +48,6 @@ public:
         // }
 
         // res.push_back({start, end});
-        
         // Push last interval
         res.push_back({start1, end1});
         
@@ -57,8 +57,9 @@ public:
 
 int main(){
     Solution s;
-    vector<vector<int>> intervals = {{1,3},{2,6},{8,10},{15,18}};
-    vector<vector<int>> res = s.merge(intervals);
+    vector<vector<int>> intervals = {{1,3},{6,9}};
+    vector<int> newInterval = {2,5};
+    vector<vector<int>> res = s.insert(intervals, newInterval);
     for(auto interval : res) {
         cout << "[" << interval[0] << "," << interval[1] << "] ";
     }
