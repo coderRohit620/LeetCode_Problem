@@ -41,7 +41,7 @@ public:
     }
 };
 
-
+// 2nd approach: We can also use the below code to find the intersection of intervals. The logic is same as above code but it is more concise and easier to understand.
 class Solution2 {
 public:
     vector<vector<int>> intervalIntersection(vector<vector<int>>& firstList, vector<vector<int>>& secondList) {

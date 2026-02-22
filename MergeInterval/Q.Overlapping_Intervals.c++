@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+// https://www.geeksforgeeks.org/problems/overlapping-intervals--174556/1
+
 class Solution {
   public:
     bool isIntersect(vector<vector<int>> intervals) {
