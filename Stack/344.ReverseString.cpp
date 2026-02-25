@@ -3,6 +3,7 @@ using namespace std;
 
 // https://leetcode.com/problems/reverse-string/description/
 
+// By using Two Pointer Approach
 class Solution {
 public:     
     void reverseString(vector<char>& s) {
@@ -17,7 +18,7 @@ public:
     }
 };  
 
-//  by Using Stack
+//  by Using Stack Approach
 class Solution2 {
 public:
     void reverseString(vector<char>& s) {
