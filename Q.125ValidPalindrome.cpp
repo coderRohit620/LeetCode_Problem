@@ -51,7 +51,7 @@ public:
     }
 };
 
-main()
+int main()
 {
     Solution sol;
     string s = " ";
