@@ -17,7 +17,7 @@ void findMaxMin(int arr[], int n){
     }
     
     cout<<"Smallest ="<<smallest<<endl;
-    cout<<"Largest ="<<largest;
+    cout<<"Largest ="<<largest<<endl;
 
 }
 int main(){
