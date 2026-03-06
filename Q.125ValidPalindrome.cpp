@@ -64,3 +64,9 @@ int main()
     return 0;
 
 }
+
+// how to execute this file in terminal ?
+// 1. Save the file with a .cpp extension (e.g., Q.125ValidPalindrome.cpp)
+// 2. Open a terminal in the same directory
+// 3. Compile the file using: g++ -std=c++17 Q.125ValidPalindrome.cpp -o Q.125ValidPalindrome
+// 4. Run the compiled executable: ./Q.125ValidPalindrome
