@@ -31,31 +31,6 @@ public:
 };
 
 
-class Solution {
-public:
-    vector<int> dailyTemperatures(vector<int>& temperatures) {
-        int n = temperatures.size();
-        stack <int> st;
-        vector<int> res(n);
-
-        res[n-1] = 0;
-        st.push(n-1);
-        
-        for(int i = n-2 ; i >= 0; i--){
-            while(!st.empty() &&  temperatures[st.top()] <= temperatures[i] ){
-                st.pop();
-            }
-            if(st.empty())
-                res[i] = 0;
-            else
-                res[i] = st.top() - i;
-                
-            st.push(i);
-        }
-        return res;
-    }
-};
-
 // padho with pratyush 
 class Solution {
 public:
@@ -81,3 +56,14 @@ public:
         return res;
     }
 };
+
+int main(){
+    Solution sol;
+    vector<int> temp = {73, 74, 75, 71, 69, 72, 76, 73};
+    vector<int> res = sol.dailyTemperatures(temp);
+
+    for(int i : res){
+        cout << i << " ";
+    }
+    return 0;
+}

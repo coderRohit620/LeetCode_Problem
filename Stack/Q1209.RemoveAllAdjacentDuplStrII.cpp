@@ -149,3 +149,12 @@ public:
         return res;
     }
 };
+
+
+int main(){
+    Solution sol;
+    string s = "deeedbbcccbdaa";
+    int k = 3;
+    cout << sol.removeDuplicates(s, k) << endl;
+    return 0;
+}   

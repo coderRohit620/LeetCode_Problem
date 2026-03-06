@@ -82,3 +82,16 @@ public:
         return res;
     }
 };
+
+
+int main(){
+    Solution sol;
+    vector<int> nums = {1, 2, 1};
+    vector<int> res = sol.nextGreaterElements(nums);
+
+    for(int i : res){
+        cout << i << " ";
+    }
+    cout << endl;
+    return 0;   
+}
