@@ -41,6 +41,22 @@ public:
     }
 };
 
+// 3rd approach using array of size 128 to cover all ASCII characters instead of just lowercase letters.
+class Solution3 {
+public:
+    int firstUniqChar(string s) {
+
+        int freq[128] = {0};
+
+        for(char c : s) freq[c]++;
+
+        for(int i = 0; i < s.size(); i++)
+            if(freq[s[i]] == 1) return i;
+
+        return -1;
+    }
+};
+
 
 int main(){
     Solution sol;
