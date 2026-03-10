@@ -60,7 +60,7 @@ public:
 
 // 3rd approach using an array of size 26 to count the frequency of lowercase letters in magazine and then decrementing the count for each character in ransomNote. This approach is more efficient in terms of space complexity compared to using an unordered_map.
 
-class Solution {
+class Solution3 {
 public:
     bool canConstruct(string ransomNote, string magazine) {
 
@@ -77,3 +77,12 @@ public:
         return true;
     }
 };
+
+
+int main(){
+    Solution sol;
+    string ransomNote = "a";
+    string magazine = "b";
+    cout << sol.canConstruct(ransomNote, magazine) << endl; // Output: false
+    return 0;
+}   
