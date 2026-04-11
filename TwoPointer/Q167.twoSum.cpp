@@ -8,6 +8,7 @@ class Solution
 public:
     vector<int> twoSum(vector<int> &arr, int target)
     {
+        sort(arr.begin(),arr.end());
         int first = 0, last = arr.size() - 1;
         while (first < last)
         {
