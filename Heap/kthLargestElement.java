@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class kthLargestElement {
-// Brute Force Approch TC-  O(n log n) 
+// dBrute Force Approch TC- O(n log n) 
      public int findKthLargest(int[] nums, int k){
         Arrays.sort(nums);
         return nums[nums.length - k];
